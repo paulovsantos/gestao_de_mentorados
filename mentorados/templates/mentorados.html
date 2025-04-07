@@ -18,10 +18,8 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm/6 font-semibold text-gray-100">Mentorados</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-100">Tarefas</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-100">Progressos</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-100">Navigators</a>
+        <a href="{% url 'mentorados' %}" class="text-sm/6 font-semibold text-gray-100">Mentorados</a>
+        <a href="{% url 'reunioes' %}" class="text-sm/6 font-semibold text-gray-100">Reuniões</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         
@@ -133,7 +131,7 @@
                     <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
                       <div class="flex items-center gap-x-4">
                         <img src="{{mentorado.foto.url }}" alt="" class="size-8 rounded-full bg-gray-800">
-                        <div class="truncate text-sm/6 font-medium text-white">{{mentorado.nome}}</div>
+                        <div class="truncate text-sm/6 font-medium text-white"><a href="{% url 'tarefa' mentorado.id %}">{{mentorado.nome}}</div>
                       </div>
                     </td>
                     <td class="hidden py-4 pl-0 pr-4 sm:table-cell sm:pr-8">
